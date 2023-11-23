@@ -53,6 +53,18 @@
             bindings = <&kp ESCAPE>;
             key-positions = <32 31 30>;
         };
+
+        cFN {
+            bindings = <&tog 2>;
+            key-positions = <60 75>;
+            layers = <0>;
+        };
+
+        cBase {
+            bindings = <&tog 0>;
+            key-positions = <60 75>;
+            layers = <2>;
+        };
     };
 
     keymap {
