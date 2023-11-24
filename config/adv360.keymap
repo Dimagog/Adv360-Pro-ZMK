@@ -77,7 +77,8 @@
         win_sleep: win_sleep {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(X) &kp U &kp S>;
+            bindings = <&macro_tap>, <&kp LG(X) &kp U &kp S>;
+
             label = "WIN_SLEEP";
             wait-ms = <50>;
             tap-ms = <50>;
