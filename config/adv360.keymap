@@ -60,6 +60,21 @@
         };
     };
 
+    macros {
+        mot: mot {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&macro_param_1to1 &tog 0>;
+
+            label = "MOT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -79,7 +94,7 @@
 &trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&mo 0    &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &mo 0
+&mot 1   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &mot 1
             >;
         };
 
